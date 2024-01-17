@@ -9,6 +9,7 @@ if (isset($_GET['id_sous'])){
     $_SESSION['id_soumission']=$_GET['id_sous'];
 }
 $id_sous=$_SESSION['id_soumission'];
+
 if (isset($_POST['enoyer_note'])) {
     $sql = "UPDATE reponses SET render=1 WHERE id_sous='$id_sous'";
     mysqli_query($conn, $sql);
