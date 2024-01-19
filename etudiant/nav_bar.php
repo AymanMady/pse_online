@@ -15,8 +15,6 @@
   <!-- CSS DataTables -->
   <link rel="stylesheet" type="text/css" href="../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
 
-
-
   <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
   <style>
@@ -74,10 +72,6 @@
             </div>
           </a>
           <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-
-            <!-- <div class="container mt-12"> </div> -->
-
-
             <div class="logo">
 
               <img title="<?= $row['nom'] . " " . $row['prenom'] ?>" id="myButton" class="style-scope yt-img-shadow" src="../images/supnum.jpg" draggable="false" style="width: 40px; height: 40px; border-radius: 50%;">
@@ -118,14 +112,8 @@
             <i class="mdi mdi-clipboard-text menu-icon"></i>
           </a>
         </li>
-
-
-
       </ul>
     </nav>
-
-
-
     <!-- plugins:js -->
     <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -149,7 +137,6 @@
     <!-- DataTables JavaScript -->
     <script type="text/javascript" src="../node_modules/datatables.net/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
-
 
     <script>
       $(document).ready(function() {
