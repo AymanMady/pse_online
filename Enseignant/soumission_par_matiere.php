@@ -107,15 +107,21 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
     <div class="content">
         <div class="col-md-12 stretch-card grid-margin">
                 <div class="card bg-gradient-<?php echo $color ?> card-img-holder text-white">
+                
                   <div class="card-body ">
                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="mb-5"><?=$row_mat['libelle']." "?></h4>
-                    <h6 class="click" ></h6>
-                    <div class="md-2">
-                    </div>
+
                     
+                    <h4 class="mb-5"><?=$row_mat['libelle']." "?></h4>
+                    <h6 class="card-img-absolute m-4 p-2 outline" ><a href="cree_soumission.php?id_matiere=<?php echo $id_matiere?>">Créer une soumission</a></h6>
+                    
+                    <div class="md-2">
+
+                    </div>
                   </div>
+
                 </div>
+
               </div>
               <?php
             while($row=mysqli_fetch_assoc($req1)){
