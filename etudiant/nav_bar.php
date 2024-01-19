@@ -15,7 +15,7 @@
   <!-- CSS DataTables -->
   <link rel="stylesheet" type="text/css" href="../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
 
-
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
 
   <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
@@ -118,14 +118,8 @@
             <i class="mdi mdi-clipboard-text menu-icon"></i>
           </a>
         </li>
-
-
-
       </ul>
     </nav>
-
-
-
     <!-- plugins:js -->
     <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -151,6 +145,9 @@
     <script type="text/javascript" src="../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
 
 
+
+    <!-- JS Bootstrap  -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       $(document).ready(function() {
         $('#example').DataTable();

@@ -105,6 +105,7 @@ if (mysqli_num_rows($req) == 0) {
 
 
 ?>
+
     <div class="content-wrapper">
         <div class="content">
 
@@ -255,7 +256,17 @@ if (mysqli_num_rows($req) == 0) {
 
                 <div class="content">
                     <div class="row">
-                        <h3 class="page-title"> Modifier votre réponse </h3><br><br>
+
+                        <div class="col-md-12">
+
+                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
+
+                                <div>
+                                    <h3 class="page-title"> Modifier votre réponse </h3>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
                         <div class="col-md-5 grid-margin">
                             <div class="card">
                                 <div class="card-body">
@@ -268,6 +279,11 @@ if (mysqli_num_rows($req) == 0) {
                                             <label>Sélectionnez un fichier : </label>
                                             <input type="file" id="fichier" name="file[]" class="form-control" multiple>
                                         </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
+                                                <input type="submit" name="button" value="Uploder" class="btn btn-primary" />
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +291,33 @@ if (mysqli_num_rows($req) == 0) {
                         <div class="col-md-7 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="card-title">Votre réponse : </p>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <a href="confirmer.php?id_sous=<?php echo $row['id_sous'] ?>&id_matiere=<?= $id_matiere ?>&color=<?= $color ?>&id_semestre=<?php echo $id_semestre; ?>" id="confirmer" class="btn btn-gradient-info btn-icon-text">
+                                                            <i class="mdi mdi-upload btn-icon-prepend"></i> Rendre
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <b>
+                                                            <blockquote class="text-danger " >
+                                                            Après avoir rendre votre travail,
+                                                            il ne sera pas possible de faire marche
+                                                            arrière. Veuillez vous assurer de vouloir procéder avant de rendre.
+                                                            </blockquote>
+                                                        </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p class="card-title">Réponse : </p>
                                     <?php
                                     $sql2 = "SELECT * FROM fichiers_reponses, reponses, etudiant WHERE fichiers_reponses.id_rep = reponses.id_rep AND reponses.id_etud = etudiant.id_etud AND email = '$email' AND reponses.id_sous = '$id_sous';";
                                     $req2 = mysqli_query($conn, $sql2);
@@ -320,24 +362,12 @@ if (mysqli_num_rows($req) == 0) {
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="form-group">
-                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                                <input type="submit" name="button" value="Enregistrer" class="btn btn-primary" />
-
-                                <a href="confirmer.php?id_sous=<?php echo $row['id_sous']?>&id_matiere=<?=$id_matiere?>&color=<?=$color?>&id_semestre=<?php echo $id_semestre; ?>"  id="confirmer" class="btn btn-gradient-danger btn-icon-text">
-                                    <i class="mdi mdi-upload btn-icon-prepend"></i> Envoyer ton travail
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                     </form>
                 </div>
             </div>
         </div>
-    <?php
+        <?php
         if (isset($_SESSION['suppression_reussi']) && $_SESSION['suppression_reussi'] === true) {
             echo "<script>
             Swal.fire({
@@ -370,10 +400,6 @@ if (mysqli_num_rows($req) == 0) {
         ?>
 
         <script>
-
-
-
-            
             var liensConfirmer = document.querySelectorAll("#confirmer");
 
             // Parcourir chaque lien d'archivage et ajouter un écouteur d'événements
@@ -424,4 +450,4 @@ if (mysqli_num_rows($req) == 0) {
 
     <?php
 }
-?>
+    ?>
