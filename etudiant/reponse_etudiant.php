@@ -342,7 +342,7 @@ if (mysqli_num_rows($req) == 0) {
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                                                <input type="submit" name="button" value="Uploder" class="btn btn-primary" />
+                                                <input type="submit" name="button" value="Uploader" class="btn btn-primary" />
                                             </div>
                                         </div>
                                 </div>
@@ -368,9 +368,7 @@ if (mysqli_num_rows($req) == 0) {
                                                     <div class="form-check">
                                                         <b>
                                                             <blockquote class="text-danger " >
-                                                            Après avoir rendre votre travail,
-                                                            il ne sera pas possible de faire marche
-                                                            arrière. Veuillez vous assurer de vouloir procéder avant de rendre.
+                                                            Après avoir soumis votre travail, vous ne pourrez pas revenir en arrière. Assurez-vous bien de vouloir procéder avant de le rendre
                                                             </blockquote>
                                                         </b>
                                                     </div>
