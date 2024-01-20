@@ -105,17 +105,48 @@ if (mysqli_num_rows($req) == 0) {
 
 
 ?>
-    <div class="content-wrapper">
-        <div class="content">
+<link rel="stylesheet" href="CSS/cronometre.css">
 
-            <div class="page-header">
+    <div class="content-wrapper">
+    <div class="content" style="height:70px;">
+
+        <div class="page-header" style="height:100px;">
+            <div style="display:flex;justify-content:space-bettwen;width:100%;height:100px;" >
+                <div style="width:100%;">
                 <h3 class="page-title">
                     <span class="page-title-icon bg-gradient-primary text-white me-2">
                         <i class="mdi mdi-home"></i>
                     </span> <a href="choix_semestre.php">Accueil</a> / <a href="index_etudiant.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo "S" . $id_semestre ?></a> / <a href="soumission_etu_par_matiere.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo $_SESSION['nom_mat'] ?></a> / <a href="soumission_etu.php?id_sous=<?= $id_sous ?>&id_matiere=<?= $id_matiere ?>&color=<? $color ?>&id_semestre=<?= $id_semestre ?>"><?php echo $row_titre['titre_sous']; ?></a> / <a href="#">Réponse</a>
                 </h3>
             </div>
+            </div>
 
+            <div class="col-md-2 " style="width:300px ;height:100px">
+        <div class="card">
+            <div class="card-body " style="padding:30px">
+                <div class="countdown">
+                    <div class="box">
+                        <span class="num btn-gradient-info" id="days"></span>
+                        <span class="btn-gradient-info text">Jours</span>
+                    </div>
+                    <div class="box">
+                        <span class="num btn-gradient-info" id="hours"></span>
+                        <span class="btn-gradient-info text">Heurs</span>
+                    </div>
+                    <div class="box">
+                        <span class="num btn-gradient-info" id="minutes"></span>
+                        <span class="btn-gradient-info text">Minutes</span>
+                    </div>
+                    <div class="box">
+                        <span class="num btn-gradient-info" id="seconds"></span>
+                        <span class="btn-gradient-info text">Secondes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
             <div class="content">
                 <div class="row">
                     <h3 class="page-title"> Mettez votre réponse ici </h3>
@@ -242,20 +273,61 @@ if (mysqli_num_rows($req) == 0) {
     $row = mysqli_fetch_assoc($req1);
 
     ?>
-        <div class="content-wrapper">
-            <div class="content">
+<link rel="stylesheet" href="CSS/cronometre.css">
 
-                <div class="page-header">
-                    <h3 class="page-title">
-                        <span class="page-title-icon bg-gradient-primary text-white me-2">
-                            <i class="mdi mdi-home"></i>
-                        </span> <a href="choix_semestre.php">Accueil</a> / <a href="index_etudiant.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo "S" . $id_semestre ?></a> / <a href="soumission_etu_par_matiere.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo $_SESSION['nom_mat'] ?></a> / <a href="soumission_etu.php?id_sous=<?= $id_sous ?>&id_matiere=<?= $id_matiere ?>&color=<? $color ?>&id_semestre=<?= $id_semestre ?>"><?php echo $row_titre['titre_sous']; ?></a> / <a href="#">Réponse</a>
-                    </h3>
+<div class="content-wrapper">
+<div class="content" style="height:70px;">
+
+    <div class="page-header" style="height:100px;">
+        <div style="display:flex;justify-content:space-bettwen;width:100%;height:100px;" >
+            <div style="width:100%;">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white me-2">
+                    <i class="mdi mdi-home"></i>
+                </span> <a href="choix_semestre.php">Accueil</a> / <a href="index_etudiant.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo "S" . $id_semestre ?></a> / <a href="soumission_etu_par_matiere.php?id_semestre=<?php echo  $id_semestre ?>"><?php echo $_SESSION['nom_mat'] ?></a> / <a href="soumission_etu.php?id_sous=<?= $id_sous ?>&id_matiere=<?= $id_matiere ?>&color=<? $color ?>&id_semestre=<?= $id_semestre ?>"><?php echo $row_titre['titre_sous']; ?></a> / <a href="#">Réponse</a>
+            </h3>
+        </div>
+        </div>
+
+        <div class="col-md-2 " style="width:300px ;height:100px">
+    <div class="card">
+        <div class="card-body " style="padding:30px">
+            <div class="countdown">
+                <div class="box">
+                    <span class="num btn-gradient-info" id="days"></span>
+                    <span class="btn-gradient-info text">Jours</span>
                 </div>
-
+                <div class="box">
+                    <span class="num btn-gradient-info" id="hours"></span>
+                    <span class="btn-gradient-info text">Heurs</span>
+                </div>
+                <div class="box">
+                    <span class="num btn-gradient-info" id="minutes"></span>
+                    <span class="btn-gradient-info text">Minutes</span>
+                </div>
+                <div class="box">
+                    <span class="num btn-gradient-info" id="seconds"></span>
+                    <span class="btn-gradient-info text">Secondes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
                 <div class="content">
                     <div class="row">
-                        <h3 class="page-title"> Modifier votre réponse </h3><br><br>
+
+                        <div class="col-md-12">
+
+                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
+
+                                <div>
+                                    <h3 class="page-title"> Modifier votre réponse </h3>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
                         <div class="col-md-5 grid-margin">
                             <div class="card">
                                 <div class="card-body">
@@ -268,6 +340,11 @@ if (mysqli_num_rows($req) == 0) {
                                             <label>Sélectionnez un fichier : </label>
                                             <input type="file" id="fichier" name="file[]" class="form-control" multiple>
                                         </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
+                                                <input type="submit" name="button" value="Uploder" class="btn btn-primary" />
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +352,33 @@ if (mysqli_num_rows($req) == 0) {
                         <div class="col-md-7 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="card-title">Votre réponse : </p>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <a href="confirmer.php?id_sous=<?php echo $row['id_sous'] ?>&id_matiere=<?= $id_matiere ?>&color=<?= $color ?>&id_semestre=<?php echo $id_semestre; ?>" id="confirmer" class="btn btn-gradient-info btn-icon-text">
+                                                            <i class="mdi mdi-upload btn-icon-prepend"></i> Rendre
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <b>
+                                                            <blockquote class="text-danger " >
+                                                            Après avoir rendre votre travail,
+                                                            il ne sera pas possible de faire marche
+                                                            arrière. Veuillez vous assurer de vouloir procéder avant de rendre.
+                                                            </blockquote>
+                                                        </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p class="card-title">Réponse : </p>
                                     <?php
                                     $sql2 = "SELECT * FROM fichiers_reponses, reponses, etudiant WHERE fichiers_reponses.id_rep = reponses.id_rep AND reponses.id_etud = etudiant.id_etud AND email = '$email' AND reponses.id_sous = '$id_sous';";
                                     $req2 = mysqli_query($conn, $sql2);
@@ -320,24 +423,12 @@ if (mysqli_num_rows($req) == 0) {
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="form-group">
-                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                                <input type="submit" name="button" value="Enregistrer" class="btn btn-primary" />
-
-                                <a href="confirmer.php?id_sous=<?php echo $row['id_sous']?>&id_matiere=<?=$id_matiere?>&color=<?=$color?>&id_semestre=<?php echo $id_semestre; ?>"  id="confirmer" class="btn btn-gradient-danger btn-icon-text">
-                                    <i class="mdi mdi-upload btn-icon-prepend"></i> Envoyer ton travail
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                     </form>
                 </div>
             </div>
         </div>
-    <?php
+        <?php
         if (isset($_SESSION['suppression_reussi']) && $_SESSION['suppression_reussi'] === true) {
             echo "<script>
             Swal.fire({
@@ -370,10 +461,6 @@ if (mysqli_num_rows($req) == 0) {
         ?>
 
         <script>
-
-
-
-            
             var liensConfirmer = document.querySelectorAll("#confirmer");
 
             // Parcourir chaque lien d'archivage et ajouter un écouteur d'événements
@@ -425,3 +512,51 @@ if (mysqli_num_rows($req) == 0) {
     <?php
 }
 ?>
+
+
+<?php
+    $sql = "select date_fin from soumission where id_sous = '$id_sous' ";
+    $req = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($req);
+    $endDate = date("M d, Y H:i:s", strtotime($row['date_fin']));
+?>
+
+<script>
+// Définir la date de fin du compte à rebours (format : "Mois Jour, Année Heures:Minutes:Secondes")
+const endDate = new Date("<?php echo $endDate; ?>").getTime();
+
+// Mettre à jour le compte à rebours chaque seconde
+const countdownInterval = setInterval(function() {
+  // Obtenir la date et l'heure actuelles
+  const now = new Date().getTime();
+
+  // Calculer la différence entre la date de fin et la date actuelle
+  const timeRemaining = endDate - now;
+
+  // Calculer les jours, heures, minutes et secondes restants
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Afficher le compte à rebours dans les éléments HTML avec les IDs correspondants
+  document.getElementById("days").innerHTML = formatTime(days) ;
+  document.getElementById("hours").innerHTML = formatTime(hours) ;
+  document.getElementById("minutes").innerHTML = formatTime(minutes) ;
+  document.getElementById("seconds").innerHTML = formatTime(seconds);
+
+  // Vérifier si le compte à rebours a atteint zéro
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval); // Arrêter le compte à rebours lorsque le temps est écoulé
+    document.getElementById("days").innerHTML = "00" ;
+    document.getElementById("hours").innerHTML = "00" ;
+    document.getElementById("minutes").innerHTML = "00" ;
+    document.getElementById("seconds").innerHTML = "00";
+  }
+}, 1000);
+
+// Fonction pour formater le temps avec un zéro en ajoutant un zéro devant les chiffres inférieurs à 10
+function formatTime(time) {
+  return time < 10 ? "0" + time : time;
+}
+</script>
