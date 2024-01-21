@@ -133,7 +133,7 @@ $row2 = mysqli_fetch_assoc($req2);
                                 <th>note</th>
                             </tr>
                         </thead>
-                        <tbody
+                        <tbody>
                             <?php
                             while ($row = mysqli_fetch_assoc($req)) {
                                 $id_etud = $row['id_etud'];
@@ -186,6 +186,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Execute the SQL update query
         $sqlUpdate = "UPDATE reponses SET note = $newNoteValue WHERE id_rep = $rep";
         $resulttt = mysqli_query($conn, $sqlUpdate);
+        echo '<script>window.location.href = "reponses_etud.php?id_matiere=' . $id_matiere . '&id_sous=' . $id_sous . '";</script>';
+
        
 
    
@@ -257,3 +259,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //     unset($_SESSION['exporte_ressi']);
     // }
 ?>
+
