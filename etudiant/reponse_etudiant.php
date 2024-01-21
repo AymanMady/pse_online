@@ -344,6 +344,103 @@ if (mysqli_num_rows($req) == 0) {
                                         <span class="btn-gradient-danger text">Secondes</span>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-md-5 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1" class="col-md-4">Description : </label>
+                                            <textarea id="exampleInputUsername1" name="description_sous" class="form-control" cols="30" rows="10"><?= $row['description_rep'] ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Sélectionnez un fichier : </label>
+                                            <input type="file" id="fichier" name="file[]" class="form-control" multiple>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12" style="display: flex; justify-content: space-between;">
+                                                <input type="submit" name="button" value="Uploader" class="btn btn-primary" />
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <a href="confirmer.php?id_sous=<?php echo $row['id_sous'] ?>&id_matiere=<?= $id_matiere ?>&color=<?= $color ?>&id_semestre=<?php echo $id_semestre; ?>" id="confirmer" class="btn btn-gradient-info btn-icon-text">
+                                                            <i class="mdi mdi-upload btn-icon-prepend"></i> Rendre
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <b>
+                                                            <blockquote class="text-danger " >
+                                                            Après avoir soumis votre travail, vous ne pourrez pas revenir en arrière. Assurez-vous bien de vouloir procéder avant de le rendre
+                                                            </blockquote>
+                                                        </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p class="card-title">Réponse : </p>
+                                    <?php
+                                    $sql2 = "SELECT * FROM fichiers_reponses, reponses, etudiant WHERE fichiers_reponses.id_rep = reponses.id_rep AND reponses.id_etud = etudiant.id_etud AND email = '$email' AND reponses.id_sous = '$id_sous';";
+                                    $req2 = mysqli_query($conn, $sql2);
+                                    if (mysqli_num_rows($req2) == 0) {
+                                    ?>
+                                        <?php
+                                        echo "Il n'y a pas de fichier ajouté !";
+                                        ?>
+                                        <ul style="list-style: none;">
+                                            <?php
+                                        } else {
+                                            while ($row2 = mysqli_fetch_assoc($req2)) {
+                                            ?>
+                                                <?php
+                                                $file_name = $row2['nom_fichiere'];
+                                                $id_rep = $row2['id_rep'];
+                                                ?>
+                                                <blockquote class="blockquote blockquote-info" style="border-radius:10px;">
+                                                    <p><strong><?= $row2['nom_fichiere'] ?> </strong></p>
+                                                    <?php
+                                                    $test = explode(".", $file_name);
+
+                                                    $test = explode(".", $file_name);
+                                                    if ($test[1] == "pdf") {
+                                                    ?>
+                                                        &nbsp;<a class="btn btn-inverse-info btn-sm" href="open_file.php?file_name=<?= $file_name ?>&id_rep=<?= $id_rep ?>">Visualiser</a>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <a class="btn btn-inverse-info btn-sm" title="Les fichiers d'extension pdf sont les seuls que vous pouvez visualiser 😒😒.">Visualiser</a>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                    <a class="btn btn-inverse-info btn-sm ms-4" href="telecharger_fichier.php?file_name=<?= $file_name ?>&id_rep=<?= $id_rep ?>">Télécharger</a>
+                                                    <a class="btn btn-inverse-danger btn-sm ms-4" href="supprime_fichier.php?id_file=<?= $row2['id_fich_rep'] ?>&id_sous=<?= $id_sous ?>&id_matiere=<?= $id_matiere ?>&color=<?= $color ?>&id_semestre=<?= $id_semestre ?>" id="supprimer">Supprimer</a>
+                                                </blockquote>
+                                                <br>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                </div>
+                            </div>
+=======
                             <?php
                             } else {
                             ?>
@@ -368,6 +465,7 @@ if (mysqli_num_rows($req) == 0) {
                             <?php
                             }
                             ?>
+>>>>>>> 32606539e1a0250717d6c41b0cae51f0809417f1
                         </div>
                     </div>
                 </div>

@@ -195,9 +195,12 @@ if ($_SESSION["role"] == "ens") {
 
 
       <script>
-        $(document).ready(function() {
-          $('#example').DataTable();
-        });
+       $(document).ready(function() {
+  $('#example').DataTable({
+    stateSave: true
+  });
+});
+
       </script>
 
       <!-- end JS for table-data -->
