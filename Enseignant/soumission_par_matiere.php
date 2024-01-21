@@ -113,7 +113,7 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
 
                     
                     <h4 class="mb-5"><?=$row_mat['libelle']." "?></h4>
-                    <h6 class="card-img-absolute m-4 p-2 outline" ><a href="cree_soumission.php?id_matiere=<?php echo $id_matiere?>">Créer une soumission</a></h6>
+                    <h6 class="card-img-absolute m-4 p-2 outline" ><a href="cree_soumission.php?id_matiere=<?php echo $id_matiere?>"><i class="mdi mdi-plus-box-outline" style="font-size:80px"></i> </a></h6>
                     
                     <div class="md-2">
 
@@ -146,7 +146,11 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
 
                         <p style="margin: 0%; " <?php if (strtotime($row['date_fin']) - time() <= 600) echo 'style="color: red;"'; ?>> De&nbsp;<?=$row['date_debut']?>&nbsp;à&nbsp;
                         <?php
-                          echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
+                          if ((strtotime($row['date_fin']) - time()) <= 600) {
+                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
+                          }else{
+                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
+                          }
                         ?>
                         </p> 
                       </div>
