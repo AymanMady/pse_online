@@ -161,11 +161,7 @@ $row_date = mysqli_fetch_assoc($req_date);
 
     <div class="content">
         <div class="row">
-<<<<<<< HEAD
-        <h3 class="page-title">Dètails sur la soumission :<?php echo $row['titre_sous']; ?> : </h3><br><br>
-=======
-            <h3 class="page-title">Dètails sur la soumission <?php echo $row['titre_sous']; ?> : </h3><br><br>
->>>>>>> 32606539e1a0250717d6c41b0cae51f0809417f1
+            <h3 class="page-title">Dètails sur la soumission <?php echo $row['titre_sous']; ?> </h3><br><br>
             <?php
 
             if (isset($_SESSION['temp_fin']) && ($_SESSION['temp_fin'] === true)) {
