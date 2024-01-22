@@ -57,7 +57,6 @@ $id_sem=$_SESSION['id_semestre'];
 
   $req2 = mysqli_query($conn , $req_sous2);
 
-if(mysqli_num_rows($req1)>0 or mysqli_num_rows($req2)>0) {
                   
  ?>
 
@@ -90,6 +89,8 @@ if(mysqli_num_rows($req1)>0 or mysqli_num_rows($req2)>0) {
                                 </thead>
                                 <tbody>
                                 <?php
+                                if(mysqli_num_rows($req1)>0 or mysqli_num_rows($req2)>0) {
+
                                     while($row=mysqli_fetch_assoc($req1)){ 
                                        ?>
                                   <tr >
