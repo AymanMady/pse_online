@@ -99,8 +99,7 @@ if (isset($_POST['button'])) {
                         //     $req_tout = mysqli_query($conn, $sql_tout);
                         //     $row_tout = mysqli_fetch_assoc($req_tout);
                         //     $subject = "Nouvelle annonce :  $titre ";
-                            
-                        
+
                         //     $message = " $descri \n\n De $date_debut_justifie  à  $date_fin_justifie" ;
                         
                         //     $url =  "https://script.google.com/macros/s/AKfycbz1KWjBC8wx3Ay9fYYg6pW_1dcS-07rYT07Xxq0SscKOgUXpiPcq5zqgfTsR7PZFr4j/exec";
