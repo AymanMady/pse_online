@@ -147,9 +147,9 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
                         <p style="margin: 0%; " <?php if (strtotime($row['date_fin']) - time() <= 600) echo 'style="color: red;"'; ?>> De&nbsp;<?=$row['date_debut']?>&nbsp;à&nbsp;
                         <?php
                           if ((strtotime($row['date_fin']) - time()) <= 600) {
-                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
+                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
                           }else{
-                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
+                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
                           }
                         ?>
                         </p> 
@@ -181,7 +181,6 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
 
 </div>
 
-    <script src="../JS/sweetalert2.js"></script>
     <script>
         function redirectToDetails(id_matiere) {
             window.location.href = "reponses_etud.php?id_sous=" + id_matiere;
@@ -189,10 +188,6 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
        
     </script>
     <script>
-
-    
-
-
 
 var liensArchiver = document.querySelectorAll("#archiver");
 
