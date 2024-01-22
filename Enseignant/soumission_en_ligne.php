@@ -100,9 +100,9 @@ if(mysqli_num_rows($req1)>0 or mysqli_num_rows($req2)>0) {
                                     <td>
                                         <?php
                                           if ((strtotime($row['date_fin']) - time()) <= 600) {
-                                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
+                                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
                                           }else{
-                                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
+                                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
                                           }
                                         ?>
                                     </td>
@@ -117,7 +117,7 @@ if(mysqli_num_rows($req1)>0 or mysqli_num_rows($req2)>0) {
                             </table>
                             
                         </div>
-                    </div>
+                    </div>z
                 </div>
             </div>
       
