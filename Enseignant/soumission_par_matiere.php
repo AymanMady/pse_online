@@ -6,7 +6,6 @@
         }
         .div-hover:hover {
           background-color: #dfe9f7;
-          background-color: <?php $color_hover; ?>;           /* background-color: #24b2d016; */
           cursor: pointer; /* Changer le curseur de la souris */
         }
         .div-hover{
@@ -130,7 +129,7 @@ $type_sous_qry = mysqli_query($conn, $type_sous);
 
             <div class="col lg-12-md-12 stretch-card grid-margin ">
                 <div class="card bg-gradient card-img-holder text-black">
-                  <div class="card-body div-hover" class="div-hover" style="display: flex;justify-content: space-between;padding: 15px;">
+                  <div class="card-body div-hover" class="div-hover" style="display: flex;justify-content: space-between;padding: 15px;background-color: <?php echo $color_hover; ?>;">
                     <div style="display: flex;justify-content: space-between;padding: 1px;" >
                     <div class="btn-gradient-<?php echo $color ?>"  style="width: 40px;border-radius: 100%;height: 40px;display: flex;justify-content: center;align-items: center;margin-right: 10px;">
                       <i class="mdi mdi-book-open-page-variant " style="font-size: 20px;"></i> 
