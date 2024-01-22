@@ -399,7 +399,7 @@ if (mysqli_num_rows($req) == 0) {
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                                        <input type="submit" name="button" value="Uploder" class="btn btn-primary" />
+                                        <input type="submit" name="button" value="Uploader" class="btn btn-primary" />
                                     </div>
                                 </div>
                         </div>
@@ -425,9 +425,7 @@ if (mysqli_num_rows($req) == 0) {
                                             <div class="form-check">
                                                 <b>
                                                     <blockquote class="text-danger ">
-                                                        Après avoir rendre votre travail,
-                                                        il ne sera pas possible de faire marche
-                                                        arrière. Veuillez vous assurer de vouloir procéder avant de rendre.
+                                                        Une fois que vous aurez rendu votre travail, vous ne pourrez pas le modifier
                                                     </blockquote>
                                                 </b>
                                             </div>
@@ -435,7 +433,7 @@ if (mysqli_num_rows($req) == 0) {
                                     </div>
                                 </div>
                             </form>
-                            <p class="card-title">Réponse : </p>
+                            <p class="card-title">Votre Réponse : </p>
                             <?php
                             $sql2 = "SELECT * FROM fichiers_reponses, reponses, etudiant WHERE fichiers_reponses.id_rep = reponses.id_rep AND reponses.id_etud = etudiant.id_etud AND email = '$email' AND reponses.id_sous = '$id_sous';";
                             $req2 = mysqli_query($conn, $sql2);
