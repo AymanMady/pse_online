@@ -96,14 +96,14 @@ $id_sem=$_SESSION['id_semestre'];
                                   <tr >
                                     <td class="click" onclick="redirectToDetails(<?php echo $row['id_sous']; ?>)"><?php echo $row['code']?></td>
                                     <td class="click" onclick="redirectToDetails(<?php echo $row['id_sous']; ?>)"><?php echo $row['titre_sous']?></td>
-                                    <td class="click" onclick="redirectToDetails(<?php echo $row['id_sous']; ?>)"><?php echo $row['date_debut']?></td>
+                                    <td class="click" onclick="redirectToDetails(<?php echo $row['id_sous']; ?>)"><?php echo '<input type="datetime-local" readonly id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_debut'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >'; ?></td>
                                     <td class="click" onclick="redirectToDetails(<?php echo $row['id_sous']; ?>)"><?php echo $row['libelle_type']?></td>
                                     <td>
                                         <?php
                                           if ((strtotime($row['date_fin']) - time()) <= 600) {
-                                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
+                                            echo '<input type="datetime-local" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" class="text-danger" >';
                                           }else{
-                                            echo '<input type="datetime" id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
+                                            echo '<input type="datetime-local"  id="date-fin-'.$row['id_sous'].'" value="'.date('Y-m-d H:i:s', strtotime($row['date_fin'])).'" onchange="modifierDateFin('.$row['id_sous'].', this.value)" style="border: none;" >';
                                           }
                                         ?>
                                     </td>
@@ -118,7 +118,7 @@ $id_sem=$_SESSION['id_semestre'];
                             </table>
                             
                         </div>
-                    </div>z
+                    </div>
                 </div>
             </div>
       
