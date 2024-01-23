@@ -259,7 +259,7 @@ INSERT INTO `type_soumission` (`id_type_sous`, `libelle`) VALUES
 
 INSERT INTO `utilisateur` (`login`, `pwd`, `active`, `code`, `id_role`) VALUES
 ('admin@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 1),
-('sidi.med@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 2)
+('sidimohamed.ahmed@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 2)
 ;
 
 -- --------------------------------------------------------
