@@ -249,7 +249,8 @@ INSERT INTO `role` (`id_role`, `profile`) VALUES
 INSERT INTO `type_soumission` (`id_type_sous`, `libelle`) VALUES 
 (1, 'Examen'), 
 (2, 'Devoir'), 
-(3, 'TP Notée');
+(3, 'TP Notée')
+;
 
 
 -- --------------------------------------------------------
@@ -258,10 +259,6 @@ INSERT INTO `type_soumission` (`id_type_sous`, `libelle`) VALUES
 
 INSERT INTO `utilisateur` (`login`, `pwd`, `active`, `code`, `id_role`) VALUES
 ('admin@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 1),
-('22018@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 3),
-('22053@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 3),
-('22086@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 3),
-('22014@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 3),
 ('sidi.med@supnum.mr', '25f9e794323b453885f5181f1b624d0b', 1, '0', 2)
 ;
 
@@ -492,7 +489,7 @@ INSERT INTO `enseignant` (`id_ens`, `nom`, `prenom`, `Date_naiss`, `lieu_naiss`,
 (35, 'Cheikhna', 'Aboubecrine', '0000-00-00', 'NKTT', 'aboubacrine.cheikhna@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (36, 'Aboubecrine', 'Aicha', '0000-00-00', 'NKTT', 'aicha.aboubecrine@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (37, 'Mohamedou', 'Debagh', '0000-00-00', 'NKTT', 'mohamedou.debagh@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
-(38, 'Sow', 'Ahmed Adama', '0000-00-00', 'NKTT', 'ahmed.sow@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
+(38, 'Sow', 'Ahmed Adama', '0000-00-00', 'NKTT', 'sow.ahmed.adama@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (39, 'Elhadj', 'El Hacen', '0000-00-00', 'NKTT', 'elhacen.elhadj@supnum.m', 22420813, 22420813, 'Prof', 'Prof', 2),
 (40, 'Babou', 'Hafeth M. Mohamed', '0000-00-00', 'NKTT', 'hafedh.mohamed-babou@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (41, 'Rabeh Hammady', ' Ahmed Dine', '0000-00-00', 'NKTT', 'hammady.rabeh@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
@@ -520,13 +517,13 @@ INSERT INTO `enseignant` (`id_ens`, `nom`, `prenom`, `Date_naiss`, `lieu_naiss`,
 (63, 'Maouloud', 'Mouhamed Sidi Mouhamed', '0000-00-00', 'NKTT', 'msidi.maouloud@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (64, 'vall', 'Moctar Med', '0000-00-00', 'NKTT', 'moctar.ahmedval@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
 (65, 'Sejad', 'Ahmed', '0000-00-00', 'NKTT', 'ahmed.sejad@supnum.mr', 22420813, 22420813, 'Prof', 'Prof', 2),
-(66, 'Mohamed Lamine', 'Mohamed Lamine', '1984-09-02', 'nktt', 'm-lamine.ahmed-sidi@supnum.mr', NULL, NULL, 'master', 'maître assistant', 2),
+(66, 'Ahmed Sidi', 'Mohamed Lamine', '1984-09-02', 'nktt', 'm-lamine.ahmed-sidi@supnum.mr', NULL, NULL, 'master', 'maître assistant', 2),
 (1, 'Cheikh', 'Dhib', '1983-01-22', 'nktt', 'cheikh.dhib@supnum.mr', NULL, NULL, 'doctor', 'directeur', 2),
-(2, 'Moussa', 'Demba', '1989-10-12', 'nkt', 'moussa.demba@supnum.mr', NULL, NULL, 'doctor', 'directeur adjoint', 2),
+(2, 'Moussa', 'Demba', '1989-10-12', 'nkt', 'moussa.ba@supnum.mr', NULL, NULL, 'doctor', 'directeur adjoint', 2),
 (3, 'Meya', 'Haroune', '1993-06-22', 'nktt', 'meya.haroune@supnum.mr', NULL, NULL, 'doctor', 'prof', 2),
-(4, 'Sidi', 'Mohamed', '1995-10-27', 'Rosso', 'sidi.med@supnum.mr', NULL, NULL, 'doctor', 'maître assistant', 2),
-(7, 'sidi', 'soueina', '1983-01-22', 'nktt', 'sidi.souiena@supnum.mr', NULL, NULL, 'doctor', 'prof', 2),
-(80, 'Mohamed Lamine', 'Mohamed Lamine', '1984-09-02', 'nktt', 'm-lamine.ahmed-sidi@supnum.mr', NULL, NULL, 'master', 'maître assistant', 2),
+(4, 'Sidi Mohamed', 'Ahmed', '1995-10-27', 'Rosso', 'sidimohamed.ahmed@supnum.mr', NULL, NULL, 'doctor', 'maître assistant', 2),
+(7, 'sidi', 'soueina', '1983-01-22', 'nktt', 'sidi.soueina@supnum.mr', NULL, NULL, 'doctor', 'prof', 2),
+(80, 'Mamadou', 'Diallo', '1984-09-02', 'nktt', 'mamadou.diallo@supnum.mr', NULL, NULL, 'master', 'maître assistant', 2),
 (81, 'ElMamy ', 'Sidi Boubacar', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
 (82, 'Fatimetou ', ' Abdou ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
 (83, 'Rifaa ', '  Sadegh ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
