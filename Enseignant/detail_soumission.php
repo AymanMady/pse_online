@@ -38,7 +38,7 @@ while ($row = mysqli_fetch_assoc($req)) {
             </span>     <a href="choix_semester.php">Accuei</a>
     <?php echo" / "?>
     <a href="index_enseignant.php?id_semestre=<?php echo $_SESSION['id_semestre'] ; ?>"><?php echo "S".$_SESSION['id_semestre'];?></a>
-    <?php echo" / "?><a href="soumission_par_matiere.php"><?php echo $_SESSION['libelle']?></a>
+    <?php echo" / "?><a href="soumission_par_matiere.php"><?php echo $row['libelle']?></a>
     <?php echo" / "?><a href="#"><?php echo $row['titre_sous']?></a>
             </h3>
         </div>
@@ -128,6 +128,7 @@ if (isset($_GET['color'])) {
     ?>
         <p>
             <a href="soumission_en_ligne.php" class="btn btn-primary">Retour</a>
+            <a href="modifier_soumission.php?id_sous=<?=$id_sous?>" class="btn btn-primary">Modifier</a>
         </p>
         <?php
 }
