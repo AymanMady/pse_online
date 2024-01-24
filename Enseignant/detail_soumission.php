@@ -50,7 +50,11 @@ while ($row = mysqli_fetch_assoc($req)) {
                 <div class="card">
                     <div class="card-body">
                         <p> <?php echo "<strong>Titre : </strong>" . $row['titre_sous']; ?></p>
-                        <p><?php echo "<strong>Description : </strong>" . $row['description_sous']; ?></p>
+                        <p>
+                            <strong>Description : </strong>
+                            <textarea style="width: 470px;  height: 200px;"><?php echo  $row['description_sous']; ?></textarea>
+
+                        </p>
                         <p><?php echo "<strong>Pour plus d'informations : </strong>" . $row['person_contact']; ?></p>
                         <p><?php echo "<strong>Code de la matière : </strong>" . $row['code']; ?></p>
                         <p> <?php echo "<strong>Date de début : </strong>" . $row['date_debut']; ?></p>
