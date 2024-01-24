@@ -52,8 +52,9 @@ while ($row = mysqli_fetch_assoc($req)) {
                         <p> <?php echo "<strong>Titre : </strong>" . $row['titre_sous']; ?></p>
                         <p>
                             <strong>Description : </strong>
-                            <textarea readonly style="width: 470px;  height: 200px;"><?php echo  $row['description_sous']; ?></textarea>
-
+                            <div style="overflow: auto; height: 70px;">
+                                    <?php echo "<strong>Description :&nbsp; </strong>" . $row['description_sous']; ?>
+                                    </div><br>
                         </p>
                         <p><?php echo "<strong>Pour plus d'informations : </strong>" . $row['person_contact']; ?></p>
                         <p><?php echo "<strong>Code de la matière : </strong>" . $row['code']; ?></p>
