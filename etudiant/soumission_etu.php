@@ -205,7 +205,7 @@ $row_date = mysqli_fetch_assoc($req_date);
                         <h4>
                             <p><?php echo "<strong>Titre : </strong>" . $row['titre_sous']; ?></p>
                             <p><?php echo "<strong>Description : </strong>"   ?></p>
-                            <textarea class="form-control"style="width: 470px;  height: 200px;  font-weight: normal;"><?php echo   $row['description_sous']; ?></textarea>
+                            <textarea readonly class="form-control"style="width: 470px;  height: 200px;  font-weight: normal;"><?php echo   $row['description_sous']; ?></textarea>
 
                             <p><?php echo "<strong>Date de  début : </strong>" . $row['date_debut']; ?></p>
                             <p><?php echo "<strong>Date de  fin : </strong>" . $row['date_fin']; ?></p>
