@@ -178,7 +178,8 @@ $row_glob = mysqli_fetch_assoc($req);
                         <div class="form-group">
                             <label>Description: </label>
                             <div class="col-md-12">
-                                <input name="description_sous"  class="form-control"  value="<?=$row_glob['description_sous'];?>">
+                                <textarea name="description_sous"  class="form-control" style="  height: 200px;"><?=$row_glob['description_sous'];?></textarea>
+
                             </div>
                         </div>
                         <div class="form-group">
