@@ -1,1 +1,1 @@
-# Version Locale de Plalteforme Soumission Des évaluations.
+# Version en ligne de la Plalteforme de Soumission Des évaluations.
