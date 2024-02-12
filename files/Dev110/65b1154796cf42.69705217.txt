@@ -1,9 +1,0 @@
-'21034@supnum.mr', '21044@supnum.mr', '22001@supnum.mr', '22004@supnum.mr',
-    '22005@supnum.mr', '22009@supnum.mr', '22011@supnum.mr', '22023@supnum.mr',
-    '22024@supnum.mr', '22026@supnum.mr', '22029@supnum.mr', '22031@supnum.mr',
-    '22032@supnum.mr', '22033@supnum.mr', '22036@supnum.mr', '22042@supnum.mr',
-    '22044@supnum.mr', '22045@supnum.mr', '22049@supnum.mr', '22050@supnum.mr',
-    '22052@supnum.mr', '22058@supnum.mr', '22059@supnum.mr', '22063@supnum.mr',
-    '22070@supnum.mr', '22073@supnum.mr', '22076@supnum.mr', '22078@supnum.mr',
-    '22079@supnum.mr', '22080@supnum.mr', '22082@supnum.mr', '22083@supnum.mr',
-    '22087@supnum.mr', '22088@supnum.mr', '22089@supnum.mr'

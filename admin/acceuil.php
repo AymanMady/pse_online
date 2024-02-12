@@ -29,6 +29,4 @@ include_once "nav_bar.php";
     </div>
 
   </div>
-
-</div>
 </div>
