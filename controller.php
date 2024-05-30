@@ -300,6 +300,8 @@ $alert = "";
             $errors['db_error'] = "Échec lors de la vérification des e-mails de la base de données!";
         }
     } 
+
+//if button verifyEmail clicked
 if(isset($_POST['verifyEmail'])){
     $_SESSION['message'] = "";
     $otpverify = mysqli_real_escape_string($conn, $_POST['otpverify']);
